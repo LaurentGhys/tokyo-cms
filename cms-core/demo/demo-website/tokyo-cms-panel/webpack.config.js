@@ -1,5 +1,4 @@
 module.export = {
-    entry: './src/app.tsx',
     output: {
         path: __dirname + '/public',
         filename: 'build/app.js'
