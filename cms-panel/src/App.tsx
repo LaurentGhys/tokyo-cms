@@ -1,7 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { AuthPage, DashboardPage, EditorPage } from './components/Pages'
-import './stylesheets/global.scss'
+import { AdminAppSettingsPage, AdminAppsPage, AdminNewAppPage } from './admin/components/Pages'
+import { ClientAppEditorPage, ClientAppsPage } from './client/components/Pages'
+import { AuthPage } from './global/components/Pages'
+import './global/stylesheets/global.scss'
 
 const App = () => {
   return (
@@ -9,8 +11,13 @@ const App = () => {
       <Switch>
         <Route path='/' exact component={AuthPage} />
         <Route path='/login' component={AuthPage} />
-        <Route path='/dashboard' exact component={DashboardPage} />
-        <Route path='/editor' component={EditorPage} />
+        <Route path='/client' exact component={ClientAppsPage} />
+        <Route path='/client/dashboard' component={ClientAppsPage} />
+        <Route path='/client/editor' component={ClientAppEditorPage} />
+        <Route path='/admin' exact component={AdminAppsPage} />
+        <Route path='/admin/dashboard' component={AdminAppsPage} />
+        <Route path='/admin/editor' component={AdminAppSettingsPage} />
+        <Route path='/admin/newApp' component={AdminNewAppPage} />
       </Switch>
     </Router>
   )

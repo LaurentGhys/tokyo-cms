@@ -1,9 +1,8 @@
-import AuthPage from './pages/AuthPage'
-import DashboardPage from './pages/DashboardPage'
-import EditorPage from './pages/EditorPage'
+import AppEditorPage from './pages/AppEditorPage'
+import AppsPage from './pages/AppsPage'
 
 export {
-  AuthPage,
-  DashboardPage,
-  EditorPage
+  AppsPage as ClientAppsPage,
+  AppEditorPage as ClientAppEditorPage
 }
+

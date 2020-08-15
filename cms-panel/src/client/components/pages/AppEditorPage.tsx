@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Accordion, Badge, Button, Card, Col, Container, Form, Nav, Row, Tab } from 'react-bootstrap'
 
-const EditorPage = () => {
+const AppEditorPage = () => {
     const [labels, setLabels] = useState({
         header1: {
             id: 'header1',
@@ -184,4 +184,4 @@ const EditorPage = () => {
     )
 }
 
-export default EditorPage
+export default AppEditorPage

@@ -13,7 +13,7 @@ const AuthPage = () => {
             event.stopPropagation()
         }
         else {
-            history.push('/dashboard')
+            history.push('/client/dashboard')
         }
         setValidated(true)
     }
