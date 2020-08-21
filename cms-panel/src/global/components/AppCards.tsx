@@ -1,48 +1,44 @@
 import React, { FunctionComponent } from 'react'
-import { Button, Card, CardDeck } from "react-bootstrap"
-
-type AppCardsProps = {
-}
+import { Button, Card, CardColumns } from "react-bootstrap"
+import { App } from '../../global/models/App.model'
 
 const AppCards = (props) => {
   return (
     <div>
-      <CardDeck>
+      <CardColumns>
         {props.children}
-      </CardDeck>
+      </CardColumns>
     </div>
   )
 }
 
+type AppCardButtonProps = {
+  title: string
+  classVariant: string
+  onClick: any
+}
+
 interface AppCardProps {
-  title?: string
-  footerText?: string
-  url?: string
-  urlDescription?: string
-  thumbnail?: string
-  appId?: string
+  app: App
+  buttons?: AppCardButtonProps[]
 }
 
 const AppCard: FunctionComponent<AppCardProps> = ({
-  title = 'Title',
-  footerText = 'Footer text',
-  url = 'https://google.com',
-  urlDescription = 'google.com',
-  thumbnail = 'https://via.placeholder.com/300',
-  appId = 'sample-websiteid-0',
+  app,
+  buttons = []
 }) => {
-  const editClicked = () => {
-  }
   return (
     < Card >
-      <Card.Img variant='top' src={thumbnail} />
+      <Card.Img variant='top' src={app.info.thumbnailUrl} />
       <Card.Body>
-        <Card.Title as='h5'>{title}</Card.Title>
-        <Button block variant='primary' onClick={editClicked}>Edit</Button>
+        <Card.Title as='h5'>{app.info.name}</Card.Title>
+        {buttons.map((button, buttonIndex) => (
+          <Button key={buttonIndex} block variant={button.classVariant} onClick={button.onClick}>{button.title}</Button>
+        ))}
       </Card.Body>
       <Card.Footer>
-        <Card.Link href={url}>{urlDescription}</Card.Link><br />
-        <small className="text-muted">{footerText}</small>
+        <Card.Link href={app.info.url}>{app.info.urlDescription}</Card.Link><br />
+        <small className="text-muted">{app.id}</small>
       </Card.Footer>
     </Card >
   )

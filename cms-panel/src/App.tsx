@@ -13,10 +13,10 @@ const App = () => {
         <Route path='/login' component={AuthPage} />
         <Route path='/client' exact component={ClientAppsPage} />
         <Route path='/client/dashboard' component={ClientAppsPage} />
-        <Route path='/client/editor' component={ClientAppEditorPage} />
+        <Route path='/client/editor/:appId' component={ClientAppEditorPage} />
         <Route path='/admin' exact component={AdminAppsPage} />
         <Route path='/admin/dashboard' component={AdminAppsPage} />
-        <Route path='/admin/editor' component={AdminAppSettingsPage} />
+        <Route path='/admin/settings/:appId' component={AdminAppSettingsPage} />
         <Route path='/admin/newApp' component={AdminNewAppPage} />
       </Switch>
     </Router>
