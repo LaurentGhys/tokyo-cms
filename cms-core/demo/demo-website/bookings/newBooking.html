@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/inputErrors.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bookings.css">
+    <link rel="stylesheet" href="css/progressTracker.css">
+    <link rel="stylesheet" href="phoneCountryCodes/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/lightpick@latest/css/lightpick.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js" integrity="sha256-vCJSGCdP2sT9Jc9MZTjK2oXAvE5bvDZ+hcFOqh0X/fc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <link rel="stylesheet" href="css/alertsTheme.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- https://wakirin.github.io/Lightpick/ -->
+    <!-- https://github.com/jackocnr/intl-tel-input#getting-started -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  </head>
+  <body>
+    <div id="backgroundImage"></div>
+
+
+    <div id="bookingContainer">
+      <div id="container">
+        <h1>New Booking</h1>
+
+        <div class="progressContainer">
+          <ul class="progressbar">
+              <li class="active">DATE</li>
+              <li>INFO</li>
+              <li>CONFIRMATION</li>
+            </ul>
+
+          <div id="stepsContainer">
+            <form id="dateForm">
+              <input required class="textField" id="dateTextField1" type="text" placeholder="From" value=""/><br/>
+              <input required class="textField" id="dateTextField2" type="text" placeholder="To" value=""/><br/>
+              <input required class="textField" id="peopleTextField" type="text" pattern="\d*" maxlength="2" placeholder="People"/><br />
+              <p id="priceLabel"></p>
+              <p id="priceInfoLabel"></p>
+              <input class="button" id="checkAvailabilityButton" type="button" value="Check availability">
+              <input class="button" id="nextStepButton1" style="display:none" type="button" value="Next step">
+            </form>
+
+            <form id="infoForm">
+              <input class="textField" id="nameTextField" type="text"  maxlength="40" placeholder="Name"/><br />
+              <input class="textField" id="emailTextField" type="email"  maxlength="50" placeholder="Email"/><br />
+              <input class="textField" id="phoneTextField" type="text" placeholder="Phone Number"/><br />
+              <textarea class="textField" id="infoTextField" maxlength="500" rows="8" placeholder="Extra information we should know about (optionnal)"></textarea>
+              <input class="button" id="nextStepButton2" style="" type="button" value="Next step">
+            </form>
+
+            <form>
+              <table id="infoTable">
+                <tr> <th></th> <th></th> </tr>
+              </table>
+              <input class="button" id="submitBookingButton" style="" type="button" value="Request booking">
+              <input class="button" id="cancelBookingButton" style="" type="button" value="Cancel request">
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script src="phoneCountryCodes/js/intlTelInput.js"></script>
+    <script src="phoneCountryCodes/js/utils.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js" integrity="sha256-vCJSGCdP2sT9Jc9MZTjK2oXAvE5bvDZ+hcFOqh0X/fc=" crossorigin="anonymous"></script>
+    <script src="js/inputErrors.js"></script>
+    <script src="js/lightpick.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/client.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.jconfirm-bg {
+  background-color: rgb(0, 0, 0)!important;
+  width: auto;
+}
+
+.jconfirm-box {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.jconfirm-content {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.jconfirm-content-pane {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.jconfirm-buttons button {
+  font-weight: bold !important;
+  font-size: 15px !important;
+  border-radius: 25px !important;
+  padding: 15px 40px !important;
+  margin: 5px !important;
+  border: none !important;
+  outline: none !important;
+  color: #ffffff !important;
+}
+
+.jconfirm-buttons .btn-red {
+  background-color: var(--danger) !important;
+}
+
+.jconfirm-buttons .btn-green {
+  background-color: var(--success) !important;
+}
+
+.jconfirm-buttons .btn-grey {
+  background-color: var(--secondary) !important;
+}

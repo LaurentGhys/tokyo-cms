@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html dir="ltr"
+      lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>TEST COMPONENTS</title>
+
+  <script type="module"
+          src="/build/tokyo-cms-core.esm.js"></script>
+  <script nomodule
+          src="/build/tokyo-cms-core.js"></script>
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: lightblue
+    }
+
+    .red {
+      color: black;
+      font-size: 64px;
+      text-align: left;
+      text-shadow: 3px 3px 3px var(--shadowColor);
+      width: 100%;
+    }
+  </style>
+  <my-component first="Stencil"
+                last="'Don't call me a framework' JS"></my-component>
+  <tcms-core></tcms-core>
+  <tcms-label contentclass="red"
+              default='test'
+              labelid='test-label-1'></tcms-label>
+</body>
+
+</html>

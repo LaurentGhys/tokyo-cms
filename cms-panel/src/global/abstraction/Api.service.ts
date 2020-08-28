@@ -20,8 +20,8 @@ const ApiDelete = (endpoint: string, body?: {}): any => {
 }
 
 type DatabaseResponse = {
-  title: string
-  message: string
+  title?: string
+  message?: string
   statusCode?: string
   data?: any
 }

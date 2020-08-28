@@ -1,0 +1,213 @@
+*:focus {
+  outline: none;
+/*  --accentColor: #268bd2;*/
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.iti {
+  width: 100%;
+  margin-bottom: 25px;
+  padding-left: 90px;
+}
+
+.iti__flag-container {
+  background-color: #e6e6e6;
+  border-radius: 25px;
+  width: 80px;
+  align-items: center;
+}
+
+/* .iti__flag-container:hover {
+  background-color: #57b846;
+} */
+
+.iti__flag-container .iti__selected-flag {
+padding-left: 25px;
+}
+
+#bookingContainer {
+  background-color: #ffffff;
+  height: auto;
+  min-width: 600px;
+/*  width: 50%;*/
+  width: auto
+  align-items: center;
+  padding: 5vw 10vw;
+  border-radius: 5px;
+  position: absolute;
+/*
+  margin-top: 7%;
+  margin-bottom: 7%;
+*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 10px #666;
+}
+
+#bookingContainer #container h1 {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: var(--accentColor);
+  font-weight: bold;
+  font-size: 52px;
+/*  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);*/
+}
+
+#bookingContainer #container #stepsContainer #priceLabel {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: var(--accentColor);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#bookingContainer #container #stepsContainer #priceInfoLabel {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: var(--secondary);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#bookingContainer #container .activeStep {
+  display: inherit;
+}
+
+#bookingContainer #container .inactiveStep {
+  display: none;
+}
+
+#bookingContainer #container .textField {
+  background-color: #e6e6e6;
+  width: 100%;
+  height: 50px;
+  color: #666;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 25px;
+  padding: 0 30px;
+  margin-bottom: 25px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px px rgb(102, 102, 102);
+}
+
+#bookingContainer #container #dateTextField1 {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+#bookingContainer #container #dateTextField2 {
+  float: left;
+  width: 48%;
+}
+
+#bookingContainer #container .textField::placeholder {
+  font-weight: normal;
+}
+
+
+#bookingContainer #container #infoTextField {
+  padding: 20px 30px;
+  height: 200px;
+}
+
+#bookingContainer #container .errorLabel {
+    color: var(--danger);
+    position: absolute;
+}
+
+#bookingContainer #container #submitButton, #bookingContainer #container #submitButtonDate {
+  background-color: var(--accentColor);
+  color: #ffffff;
+  width: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(50%, 0);
+  
+}
+#bookingContainer #container #submitButtonDate {
+  /* background-color: var(--ac); */
+}
+
+#bookingContainer #container #submitButton:hover {
+  background-color: #212529;
+}
+
+#bookingContainer #container .textField:-internal-autofill-selected {
+    background-color: rgb(232, 240, 254) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+#bookingContainer #container #infoTable {
+    width: 100%;
+    /* border: solid 5px var(--accentColor); */
+    color: #666;
+    /* border-spacing: 20px 5px;
+    border-collapse: separate; */
+
+}
+
+#bookingContainer #container #infoTable .cell2 {
+  background-color: #e6e6e6;
+}
+
+#bookingContainer #container #infoTable .cell2 td{
+}
+
+#bookingContainer #container #infoTable .cell2 .title {
+}
+
+#bookingContainer #container #infoTable tr {
+}
+
+#bookingContainer #container #infoTable td {
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 6px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#bookingContainer #container #infoTable .title {
+  font-weight: bold;
+}
+
+#bookingContainer #container .button {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 25px;
+  padding: 0 30px;
+  margin-top: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--accentColor);
+  color: #ffffff;
+/*  box-shadow: 5px 5px 5px #666;*/
+}
+
+#bookingContainer #container #checkAvailabilityButton {
+  background-color: var(--secondary);
+}
+
+#bookingContainer #container #submitBookingButton {
+  background-color: var(--success);
+}
+
+#bookingContainer #container #cancelBookingButton {
+  background-color: var(--secondary);
+  margin-top: 25px;
+}

@@ -1,0 +1,92 @@
+* {
+  --accentColor: #268bd2;
+  --tableColor: #9c9999;
+}
+
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  z-index: 999;
+  position: relative;
+}
+
+.mainContainerChild + .mainContainerChild {
+  margin-left: 20px;
+}
+
+.mainContainerChild {
+  padding: 25px 100px;
+  width: auto;
+  height: auto;
+  padding: 25px 100px;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#calendarContainer {
+  background-color: #ffffff;
+}
+
+#newBookingsContainer {
+  background-color: #ffffff;
+}
+
+#newBookingsContainer h1 {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: var(--accentColor);
+  font-weight: bold; 
+  font-size: 42px;
+}
+
+/* Table stuff */
+#newBookingsTables {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#newBookingsTables tr th{
+  padding: 25px;
+  text-align: center;
+  background-color: var(--tableColor);
+  color: white;
+}
+
+#newBookingsTables tr .cell1, #newBookingsTables tr .cell2{
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  user-select: none;
+}
+#newBookingsTables tr .name {
+/*  border-right: solid 5px var(--tableColor);*/
+}
+/* #newBookingsTables tr .cell1.name {
+  background-color: #d9d9d9 !important;
+}
+#newBookingsTables tr .cell2.name {
+  background-color: #c3c2c2 !important;
+} */
+#newBookingsTables tr .cell2 {
+  background-color: #d9d9d9;
+}
+
+#newBookingsContainer .button {
+  height: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 25px;
+  padding: 0 30px;
+  margin-bottom: 25px;
+  border: none;
+  outline: none;
+  background-color: var(--success);
+  color: #ffffff;
+  width: 100%;
+  float: left;
+}

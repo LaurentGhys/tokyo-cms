@@ -1,0 +1,26 @@
+#hoverContainer {
+  position: absolute;
+  height: auto;
+  width: 200px;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 5px #666;
+}
+#hoverContainer h1, #hoverContainer h2 {
+  text-align: center;
+  height: 20px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px
+}
+
+#hoverContainer h2 {
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  font-weight: light;
+  padding: 10px;
+  color: #959595;
+}

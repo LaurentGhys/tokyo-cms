@@ -1,0 +1,233 @@
+{
+  "Home": {
+    "nl": "Home",
+    "en": "Home",
+    "fr": "Accueil"
+  },
+  "Kamers": {
+    "nl": "Kamers",
+    "en": "Rooms",
+    "fr": "Chambres"
+  },
+  "Omgeving": {
+    "nl": "Omgeving",
+    "en": "Surroundings",
+    "fr": "Alentours"
+  },
+  "Contact": {
+    "nl": "Contact",
+    "en": "Contact",
+    "fr": "Contact"
+  },
+  "Bereikbaarheid": {
+    "nl": "Bereikbaarheid",
+    "en": "Accessibility",
+    "fr": "L'accessibilité"
+  },
+  "Tuin": {
+    "nl": "Tuin",
+    "en": "Garden",
+    "fr": "Jardin"
+  },
+  "Welkom": {
+    "nl": "Welkom",
+    "en": "Welcome",
+    "fr": "Bienvenue"
+  },
+  "Aankomst": {
+    "nl": "Aankomst",
+    "en": "Arrival",
+    "fr": "Arrivée"
+  },
+  "Vertrek": {
+    "nl": "Vertrek",
+    "en": "Departure",
+    "fr": "Départ"
+  },
+  "Personen": {
+    "nl": "Personen",
+    "en": "People",
+    "fr": "Personnes"
+  },
+  "Check beschikbaarheid": {
+    "nl": "Check beschikbaarheid",
+    "en": "Check availability",
+    "fr": "Vérifier la disponibilité"
+  },
+  "Introductie": {
+    "nl": "Introductie",
+    "en": "Introduction",
+    "fr": "Introduction"
+  },
+  "WELKOM BIJ LA BASTIDE AU VENTOUX": {
+    "nl": "WELKOM BIJ LA BASTIDE AU VENTOUX",
+    "en": "WELCOME TO LA BASTIDE AU VENTOUX",
+    "fr": "BIENVENUE À LA BASTIDE AU VENTOUX"
+  },
+  "--IntroParagraph": {
+    "nl": "Op de zuid-helling van de legendarische Mont Ventoux bevindt zich La Bastide au Ventoux. La Bastide au Ventoux ligt op wandelafstand van een van de mooiste dorpjes in de Provence,Bédoin. Met vier gastenkamers elk met eigen prive terras en schitterend uitzicht waant u zich als God in Frankrijk.",
+    "en": "The Bastide au Ventoux is located on the south slope of the legendary Mont Ventoux. La Bastide au Ventoux is within walking distance of one of the most beautiful villages in Provence, Bédoin. With four guest rooms, each with its own private terrace and stunning views, you feel like God in France.",
+    "fr": "La Bastide au Ventoux est située sur le versant sud du légendaire Mont Ventoux. La Bastide au Ventoux est à distance de marche de l'un des plus beaux villages de Provence, Bédoin. Avec quatre chambres, chacune avec sa propre terrasse privée et une vue imprenable, vous vous sentez comme Dieu en France."
+  },
+  "Lees meer": {
+    "nl": "Lees meer",
+    "en": "read more",
+    "fr": "lire plus"
+  },
+  "Onze kamers": {
+    "nl": "Onze kamers",
+    "en": "Our rooms",
+    "fr": "Nos chambres"
+  },
+  "VIER GASTENKAMERS": {
+    "nl": "VIER GASTENKAMERS",
+    "en": "Four guest rooms",
+    "fr": "Quatre chambres d'hôtes"
+  },
+  "--KamersParagraph": {
+    "nl": "Onze kamers hebben allemaal een prive terras en zijn gelegen op de begane grond. De kamers beschikken over dubbelbed,badkamer met toilet,lavabo en inloopdouche. Led televisie en gratis wifi. Lakens,handdoeken,washandjes,föhn en handzeep worden door ons voorzien. Mogelijkheid tot zetten van koffie of thee.",
+    "en": "Our rooms all have a private terrace and are located on the ground floor. The rooms have a double bed, bathroom with toilet, sink and walk-in shower. Led television and free wifi. Sheets, towels, washcloths, hair dryer and hand soap are provided by us. Possibility to make coffee or tea.",
+    "fr": "Nos chambres ont toutes une terrasse privée et sont situées au rez-de-chaussée. Les chambres ont un lit double, une salle de bain avec toilette, lavabo et douche à l'italienne. Led télévision et wifi gratuit. Draps, serviettes, débarbouillettes, sèche-cheveux et savon pour les mains sont fournis par nous. Possibilité de faire du café ou du thé."
+  },
+  "Onze tuin": {
+    "nl": "Onze tuin",
+    "en": "Our garden",
+    "fr": "Notre jardin"
+  },
+  "ZWEMBAD MET POOLHOUSE": {
+    "nl": "ZWEMBAD MET POOLHOUSE",
+    "en": "SWIMMING POOL WITH POOLHOUSE",
+    "fr": "PISCINE AVEC PISCINE"
+  },
+  "--TuinParagraph": {
+    "nl": "Tussen de wijnranken loopt u naar ons zwembad. Voor alle gasten zijn er comfortabele ligstoelen (Strandlakens zijn niet voorzien). Aan het zwembad zijn overal veel schaduwrijke plekjes onder de olijfbomenmet schitterend uitzicht op het dorpje Bédoin. Ook koelkast met drankjes,wijn en bier aan democratische prijzen.",
+    "en": "Between the vines you walk to our swimming pool. There are comfortable loungers for all guests (Beach towerls are not provided). At the swimming pool there are many shady spots under the olive trees with a beautiful view of the village of Bédoin. Also fridge with drinks, wine and beer at democratic prices.",
+    "fr": "Entre les vignes, vous marchez jusqu'à notre piscine. Il y a des chaises longues confortables pour tous les invités (Les serviettes de plage ne sont pas fournies) . À la piscine, il y a de nombreux endroits ombragés sous les oliviers avec une vue magnifique sur le village de Bédoin. Aussi réfrigérateur avec boissons, vin et bière à des prix démocratiques."
+  },
+  "GELEGEN IN HET HART VAN DE PROVENCE": {
+    "nl": "GELEGEN IN HET HART VAN DE PROVENCE",
+    "en": "LOCATED IN THE HEART OF PROVENCE",
+    "fr": "SITUE AU COEUR DE LA PROVENCE"
+  },
+  "--OmgevingParagraph": {
+    "nl": "Voor de actieve vakantieganger is er een uitgebreid aanbod:<br/>-Natuurlijk de beklimming van de Mont-Ventoux direct vanuit ons domein. <br/>-Prachtige wandelingen door de rivier de Toulerenc of lavandelvelden van Sault<br/>-Kayaken op de heldere rivier de Sorgues met tussen de middag een picknick<br/>-Met de vespa of motor touren door de Gorges de la Nesque.<br/>-Met een prive vliegtuigje boven de Mont Ventoux cirkelen<br/>Daarnaast zijn er vele culturele uitstappen:<br/>-De prachtige stad Avignon met het beroemde palais du pape<br/>-De romeinse opgravingen in Vaison La Romaine<br/>-De bekende antiekmarkt in Isle-sur-la-Sorgues<br/>-Wijnproeven in Gigondas of Vayqueras",
+    "en": "For the active holiday maker there is a wide range: <br/> -Natural climb the Mont-Ventoux directly from our domain. <br/> -Beautiful walks through the river Toulerenc or lavender fields of Sault. <br/> -Kayaking on the clear river Sorgues with a picnic at lunchtime. <br/> -With vespa or motorbike tours through the Gorges de la Nesque. <br/> -With a private plane circling the Mont Ventoux. <br/> There are also many cultural excursions: <br/> -The beautiful city of Avignon with the famous palais du pape. <br/> -The roman excavations in Vaison La Romaine. <br/> -The famous antique market in Isle-sur-la-Sorgues. <br/> -Wine tasting in Gigondas or Vayqueras.",
+    "fr": "Pour les vacanciers actifs, il existe une large gamme: <br/> -Naturellement escalader le Mont-Ventoux directement à partir de notre domaine. <br/> -Belles promenades à travers la rivière Toulerenc ou les champs de lavande de Sault. <br/> -Kayaking sur la rivière Sorgues avec un pique-nique à l'heure du déjeuner. <br/> -Avec des tours en vespa ou à moto dans les Gorges de la Nesque. <br/> -Avec un avion privé faisant le tour du Mont Ventoux. <br/> De nombreuses excursions culturelles sont également proposées: <br/> -La belle ville d’Avignon avec son célèbre palais du pape. <br/> -Les fouilles romaines à Vaison La Romaine. <br/> -Le célèbre marché aux antiquités d'Isle-sur-la-Sorgues. <br/> -Dégustation de vins à Gigondas ou à Vayqueras."
+  },
+  "Prijzen": {
+    "nl": "Prijzen",
+    "en": "Prices",
+    "fr": "Les Prix"
+  },
+  "ONZE PRIJZEN": {
+    "nl": "ONZE PRIJZEN",
+    "en": "OUR PRICES",
+    "fr": "NOS PRIX"
+  },
+  "Goedkoper dan andere sites!": {
+    "nl": "25% Goedkoper dan op andere sites!",
+    "en": "25% Cheaper than other sites!",
+    "fr": "25% Moins cher que sur d'autre sites!"
+  },
+  "AprilKorting": {
+    "nl": "Maand april 10% korting",
+    "en": "10% discount in April",
+    "fr": "10% de reduction en Avril"
+  },
+  "Hoogseizoen": {
+    "nl": "Hoogseizoen: <span>Juli en Augustus</span>",
+    "en": "High season: <span>July and August",
+    "fr": "Haute saison: <span>Juillet et Août</span>"
+  },
+  "Laagseizoen": {
+    "nl": "Laagseizoen: <span>rest van het jaar</span>",
+    "en": "Low season: <span>rest of the year</span>",
+    "fr": "Basse saison: <span>reste de l'année"
+  },
+  "ONZE VOORWAARDEN": {
+    "nl": "ONZE VOORWAARDEN",
+    "en": "OUR CONDITIONS",
+    "fr": "NOS TERMES ET CONDITIONS"
+  },
+  "--VoorwaardenParagraph": {
+    "nl": "- Bovenstaande kamerprijzen zijn per nacht per kamer (2 personen max per kamer) <br/>- Inclusief ontbijtbuffet <br/> - Minimaal verblijf van 3 nachten <br/>- Exclusief: toeristenbelasting (0,70 euro p.p. per dag) <br/>- Aankomst tussen 16.00 en 19.00 uur,vertrek voor 10.00 uur <br/>- Gratis wifi verbinding <br/>- Privé parkingplaats afgesloten met automatische toegangspoort waarvan u de afstandsbediening krijgt <br/>- Huisdieren zijn helaas niet toegelaten op het domein. <br/>- Op de kamers geldt een rookverbod. <br/> - Zwembad is toegankelijk van 9.00 uur tot 19.00 uur. <br/>",
+    "en": "- The above room rates are per night per room (2 people max per room) <br/> - Including breakfast buffet <br/> - Minimum stay of 3 nights <br/> - Excluding: tourist tax (0.70 euros per person per day) <br / >-Arrival between 4 and 7 pm, departure before 10 am <br/> - Free WiFi connection <br/> - Private parking place closed with automatic access gate of which you receive the remote control <br/> - Pets are unfortunately not allowed on the domain. <br/> - Smoking is prohibited in the rooms. <br/> - Swimming pool is accessible from 9 a.m. to 7 p.m. <br/>",
+    "fr": "- Les tarifs indiqués ci-dessus s'entendent par nuit et par chambre (2 personnes maximum par chambre). <br/> - Petit déjeuner buffet inclus <br/> - Séjour minimum de 3 nuits <br/> - Non compris: taxe de séjour (0,70 euros par personne et par jour) <- Arrivée entre 16h00 et 19h00, départ avant 10h00 <br/> - Connexion WiFi gratuite <br/> - Parking privé fermé avec portail d'accès automatique dont vous recevez la télécommande. <br/> - Les animaux domestiques ne sont malheureusement pas autorisés sur notre domaine. <br/> - Il est interdit de fumer dans les chambres.<br/> - La piscine est accessible de 9h à 19h. <br/>"
+  },
+  "Stuur ons een bericht": {
+    "nl": "Stuur ons een bericht",
+    "en": "Send us a message",
+    "fr": "Envoyez nous un message"
+  },
+  "Naam": {
+    "nl": "Naam",
+    "en": "Name",
+    "fr": "Nom"
+  },
+  "Email": {
+    "nl": "Email",
+    "en": "Email",
+    "fr": "Email"
+  },
+  "Telephoon nummer": {
+    "nl": "Telefoonnummer",
+    "en": "Phone number",
+    "fr": "Numéro de téléphone"
+  },
+  "Bericht": {
+    "nl": "Bericht",
+    "en": "Message",
+    "fr": "Message"
+  },
+  "Verstuur": {
+    "nl": "Verstuur",
+    "en": "Send",
+    "fr": "Envoyer"
+  },
+  "Per auto": {
+    "nl": "Per auto",
+    "en": "By car",
+    "fr": "En voiture"
+  },
+  "--AutoParagraph": {
+    "nl": "Autosnelweg A31/A6<br/>Afrit 22 Carpentras<br/>D950 Bédoin",
+    "en": "Motoway A31/A6<br/>Exit 22 Carpentras<br/>D950 Bédoin",
+    "fr": "Autoroute A31/A6<br/>Sortie 22 Carpentras<br/>D950 Bédoin"
+  },
+  "Per trein": {
+    "nl": "Per trein",
+    "en": "By train",
+    "fr": "En train"
+  },
+  "--TreinParagraph": {
+    "nl": "TGV<br/>Bruxelles-midi <br/>naar Avignon TGV",
+    "en": "TGV<br/>to Avignon",
+    "fr": "TGV<br/>à Avignon"
+  },
+  "Per vliegtuig": {
+    "nl": "Per vliegtuig",
+    "en": "By plane",
+    "fr": "En Avion"
+  },
+  "--VliegtuigParagraph": {
+    "nl": "- Ryanair vanuit Charleroi of Eindhoven naar Marseille<br/>- Brussel Airlines van Brussel naar Marseille",
+    "en": "- Raynair to Marseille",
+    "fr": "- Air France to Marseille"
+  },
+  "CoronaTitle": {
+    "nl": "COVID-19 maatregelen >",
+    "en": "COVID-19 countermeasures >",
+    "fr": "Mesures COVID-19 >"
+  },
+  "CoronaSubtitle": {
+    "nl": "Onze COVID-19 maatregelen voor uw vakantie!",
+    "en": "Our COVIDE-19 countermeasure for your holiday!",
+    "fr": "Nos mesures COVID-19 pour vos vacances!"
+  },
+  "CoronaMaatregelen": {
+    "nl": "-Door de desinfectie van de kamers kunnen wij gasten enkel verwelkomen vanaf 18:00 uur<br/>- Wij zijn een kleinschalige chambres d’hôtes op een groot terrein waar social distancing geen probleem is<br/>- Ontbijt zal plaatsvinden op groot terras met afstand van 2 meter per tafel<br/>-Ontbijt wordt geserveerd aan uw eigen tafel<br/>-Overal op het terrein is desinfecterende handgel<br/>-Tafels en ligstoelen aan het zwembad zijn gedurende uw verblijf alleen toegankelijk voor uzelf<br/>- Voldoende handzeep is aanwezig op uw badkamer",
+    "en": "-Due to the disinfection of the rooms, we can only welcome guests from 18:00<br/>- We are a small-scale bed&breakfast on a very large domain where social distancing is no problem. <br/>-Breakfast takes place on a large terrace with a distance of 2 meters per table<br/>-Disinfectant hand gel is available everywhere on the site<br/>-Poolside tables and loungers are only accessible to you during your stay<br/>-Sufficient hand soap can be found in your bathroom",
+    "fr": "-En raison de la désinfection des chambres, nous ne pouvons accueillir les clients q'a partir de 18h00.<br/>- Nous sommes une petite chambre d'hôtes sur un grand site où la distanciation sociale n'est auccun problème. <br/>-Le petit déjeuner a lieu sur une grande terrasse avec une distance de 2 mètres par table r/><b- Le petit déjeuner est servia votre propre table <b- Le gel désinfectant pour les mains est disponible partout sur le sit<br/>-Les tables et transats au bord de la piscine ne sont accessibles que pendant votre séjour<br/> - Il y a suffisamment de savon dans votre sa de bain" 
+  }
+}
+

@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Button, Card, Container, Form as BootstrapForm, Image, Table } from 'react-bootstrap'
 import { useHistory, useParams } from 'react-router-dom'
 import { DatabaseGetApp, DatabaseUpdateApp } from '../../../global/abstraction/App.service'
-import { DatabaseUpdateLabels } from '../../../global/abstraction/Label.service'
+import { DatabaseGetLabelNames, DatabaseUpdateLabelNames } from '../../../global/abstraction/Labels.service'
 import { Languages } from '../../../global/abstraction/Language.service'
 import { Form } from '../../../global/components/Form'
+import { LabelsTable } from '../../../global/components/LabelsTable'
 import { App } from '../../../global/models/App.model'
 
 const AppSettingsPage = () => {
@@ -12,28 +13,23 @@ const AppSettingsPage = () => {
   const history = useHistory()
   const [app, setApp]: [App, any] = useState(null)
   const [selectedNewLang, setSelectedNewLang] = useState(Languages[0])
-  const [newLabelId, setNewLabelId] = useState('')
-  const [newLabelName, setNewLabelName] = useState('')
   const [formSubmitTrigger, setFormSubmitTrigger] = useState(false)
-  const [updatedLabelNames, setUpdatedLabelName]: [Object, any] = useState({})
+  const [labelNames, setLabelNames]: [Object, any] = useState({})
 
   useEffect(() => {
     DatabaseGetApp(appId)
       .then(res => {
-        setApp(res.data)
+        const app = new App(res.data)
+        setApp(app)
+        DatabaseGetLabelNames(appId, app.cms.labelIds)
+          .then(res => setLabelNames(res.data))
       })
   }, [])
 
   useEffect(() => {
-    console.log(updatedLabelNames)
-  }, [updatedLabelNames])
+    console.log(labelNames)
+  }, [labelNames])
 
-  const updateLabelName = (labelId: string, value: string): void => {
-    setUpdatedLabelName({
-      ...updatedLabelNames,
-      [labelId]: value
-    })
-  }
 
   const newLangSubmit = () => {
     const updatedApp = {
@@ -49,31 +45,25 @@ const AppSettingsPage = () => {
     setApp(updatedApp)
   }
 
-  const newLabelSubmit = () => {
+  const labelNameChanged = (labelId: string, newName: string): void => {
+    setLabelNames({
+      ...labelNames,
+      [labelId]: newName
+    })
+  }
+
+  const newLabelSubmit = (labelId: string, labelName: string) => {
     const updatedApp = {
       ...app,
       cms: {
         ...app.cms,
         labelIds: [
           ...app.cms.labelIds,
-          newLabelId
+          labelId
         ]
       }
     }
-    setNewLabelId('')
-    setNewLabelName('')
-    setApp(updatedApp)
-  }
-
-  const deleteLangSubmit = (langCode: string) => {
-    const langs = app.cms.languages.filter(lang => lang !== langCode)
-    const updatedApp = {
-      ...app,
-      cms: {
-        ...app.cms,
-        languages: langs
-      }
-    }
+    labelNameChanged(labelId, labelName)
     setApp(updatedApp)
   }
 
@@ -84,6 +74,18 @@ const AppSettingsPage = () => {
       cms: {
         ...app.cms,
         labelIds: labels
+      }
+    }
+    setApp(updatedApp)
+  }
+
+  const deleteLangSubmit = (langCode: string) => {
+    const langs = app.cms.languages.filter(lang => lang !== langCode)
+    const updatedApp = {
+      ...app,
+      cms: {
+        ...app.cms,
+        languages: langs
       }
     }
     setApp(updatedApp)
@@ -103,7 +105,7 @@ const AppSettingsPage = () => {
     let updatedApp = new App({ ...appCopy, ...formData })
     DatabaseUpdateApp(updatedApp)
       .then(() => {
-        DatabaseUpdateLabels(app.id, updatedLabelNames)
+        DatabaseUpdateLabelNames(app.id, labelNames)
           .then(() => {
             history.go(0)
           })
@@ -184,49 +186,15 @@ const AppSettingsPage = () => {
                 </div>
                 <div>
                   <h3>Labels</h3>
-                  <Table striped bordered hover>
-                    <thead>
-                      <tr>
-                        <th>ID</th>
-                        <td>Name</td>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {app.cms.labelIds.map((labelId, index) => (
-                        <tr key={index}>
-                          <td>{labelId}</td>
-                          <td>
-                            <BootstrapForm.Control size='sm' type='text' placeholder='Label name'
-                              onChange={(e) => updateLabelName(labelId, e.target.value)}
-                              value={updatedLabelNames[labelId]} />
-                          </td>
-                          <td>
-                            <Button variant='danger' size='sm' block
-                              onClick={() => deleteLabelSubmit(labelId)}>Delete</Button>
-                          </td>
-                        </tr>
-                      ))}
-                      <tr>
-                        <td>
-                          <BootstrapForm.Control size='sm' type='text' placeholder='label-id'
-                            onChange={(e) => setNewLabelId(e.target.value)}
-                            value={newLabelId} />
-                        </td>
-                        <td>
-                          <BootstrapForm.Control size='sm' type='text' placeholder='Label name'
-                            onChange={(e) => setNewLabelName(e.target.value)}
-                            value={newLabelName} />
-                        </td>
-                        <td>
-                          {!app.cms.labelIds.includes(newLabelId) && (
-                            <Button variant='primary' size='sm' block
-                              onClick={newLabelSubmit}>New</Button>
-                          )}
-                        </td>
-                      </tr>
-                    </tbody>
-                  </Table>
+                  <LabelsTable
+                    labelIds={app.cms.labelIds}
+                    labelNames={labelNames}
+                    deleteLabelSubmit={deleteLabelSubmit}
+                    labelNameChanged={labelNameChanged}
+                    newLabelSubmit={newLabelSubmit}
+                    newLabel
+                    labelsDelete
+                  />
                 </div>
               </Card.Body>
               <Card.Footer>

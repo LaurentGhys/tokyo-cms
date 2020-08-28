@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/admin/adminDashboard.css">
+    <link rel="stylesheet" href="../css/admin/calendar.css">
+    <link rel="stylesheet" href="../css/admin/hoverTooltip.css">
+    <link rel="stylesheet" href="../css/alertsTheme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- <table id="newBookingsTable" style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>People</th>
+        <th>Date</th>
+        <th>Creation Date</th>
+      </tr>
+    </table> -->
+
+    <div id="backgroundImage"></div>
+    
+      <div id="hoverContainer">
+        <h1>Name</h1>
+        <h1>People</h1>
+        <h2>Click for more info</h2>
+      </div>
+
+    <div id='mainContainer'>
+      <div id="newBookingsContainer" class="mainContainerChild">
+        <h1>New Bookings</h1>
+        <button class="button" id="createBookingButton">Create booking</button>
+        <table id="newBookingsTables">
+          <tr>
+            <th>Name</th>
+            <th>People</th>
+            <th>Creation Date</th>
+          </tr>
+        </table>
+      </div>
+
+      <div id="calendarContainer" class="mainContainerChild">
+        <h1 id="monthHeading">Month</h1>
+        <button class="button" id="previousMonthButton">Previous month</button>
+        <button class="button" id="nextMonthButton">Next month</button>
+        <table id="calendarTable">
+          <tr>
+            <th></th>
+            <th id="bedoin">Bédoin</th>
+            <th id="lounge">Lounge</th>
+            <th id="terasse">Terasse</th>
+            <th id="ventoux">Ventoux</th>
+          </tr>
+        </table>
+      </div> 
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/admin/calendar.js"></script>
+    <script src="../js/admin/hoverTooltip.js"></script>
+    <script src="../js/admin/calendarDisplayer.js"></script>
+    <script src="../js/admin/adminDashboard.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/admin/bookingInfo.css">
+  <link rel="stylesheet" href="../css/admin/calendar.css">
+  <link rel="stylesheet" href="../css/admin/hoverTooltip.css">
+  <link rel="stylesheet" href="../css/alertsTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="backgroundImage"></div>
+ 
+
+
+  <form id="bookingForm">
+    <div id="container">
+      <h1>Booking Info</h1>
+
+      <p>Datum</p>
+      <input disabled class="textField" id="dateTextField1" type="text" placeholder="Van" />
+      <input disabled class="textField" id="dateTextField2" type="text" placeholder="Tot" /><br />
+      <p>Aantal mensen</p>
+      <input disabled class="textField" id="peopleTextField" type="text" pattern="\d*" maxlength="1" placeholder="People" /><br />
+      <p>Naam</p>
+      <input disabled class="textField" id="nameTextField" type="text" maxlength="40" placeholder="Name" /><br />
+      <p>Email</p>
+      <input disabled class="textField" id="emailTextField" type="email" maxlength="50" placeholder="Email" /><br />
+      <p>Telephoon nummer</p>
+      <input disabled class="textField" id="phoneTextField" type="text" placeholder="Phone Number" /><br />
+      <p>Extra informatie</p>
+      <textarea disabled class="textField" id="infoTextField" maxlength="500" rows="8" placeholder="Extra Info"></textarea>
+
+      <!-- <input class="button" id="updateInfoButton" type="button" value="Informatie updaten"> -->
+
+      <input class="button" id="confirmButton" type="button" value="Confirm">
+      <input class="button" id="deleteButton" type="button" value="Delete">
+<!--      <input class="button" id="sendFormButton" type="button" value="Verstuur formulier">-->
+      <input class="button" id="downloadFormButton" type="button" value="Download form">
+
+    </div>
+  </form>
+
+
+  <div id="calendarContainer">
+    <h1 id="monthHeading">Month</h1>
+    <button class="button" id="previousMonthButton">Previous month</button>
+    <button class="button" id="nextMonthButton">Next month</button>
+    <!-- <input class="button" id="nextRoomButton" type="button" value="Change Rooms">
+    <input class="button" id="updateRoomButton" type="button" value="Update Rooms"> -->
+    <table id="calendarTable">
+      <tr>
+        <th>Datum</th>
+        <th id="bedoin">Bédoin</th>
+        <th id="lounge">Lounge</th>
+        <th id="terasse">Terasse</th>
+        <th id="ventoux">Ventoux</th>
+      </tr>
+    </table>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js" integrity="sha256-vCJSGCdP2sT9Jc9MZTjK2oXAvE5bvDZ+hcFOqh0X/fc=" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/admin/calendar.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="../js/admin/jspdf.min.js"></script>
+  <script src="../js/admin/hoverTooltip.js"></script>
+  <script src="../js/admin/calendarDisplayer.js"></script>
+  <script src="../js/admin/bookingInfo.js"></script>
+  <script src="../js/admin/pdfGenerator.js"></script>
+
+</body>
+
+</html>

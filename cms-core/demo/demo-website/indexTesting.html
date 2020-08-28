@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Bastide au Ventoux</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <link href="css/lang.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="bookings/css/inputErrors.css" rel="stylesheet">
+  <link href="bookings/css/alertsTheme.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" rel="stylesheet" >
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|Yellowtail&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/lightpick@latest/css/lightpick.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Hotjar Tracking Code for bastideventoux.com -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1439656,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  
+  </head>
+<body>
+  <div id="content">
+    <div class="topnav" id="navbar">
+      <a href="#HomeSection">lang!Home</a>
+      <a href="#KamersSection">lang!Kamers</a>
+      <a href="#OmgevingSection">lang!Omgeving</a>
+      <a href="#ContactSection">lang!Contact</a>
+      <a href="#BereikbaarheidSection">lang!Bereikbaarheid</a>
+      <a href="javascript:void(0);" class="navbarIcon" onclick="showMobileNavbar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div> 
+
+    <section id="HomeSection" class="section">
+      <div class="centerContainer">
+        <h1 class="undertitle">lang!Welkom</h1>
+        <h4>La Bastide au Ventoux</h4>
+      </div>
+      <div id="availabilityContainer">
+        <input required id="arrivalTextFieldHome" type="text" placeholder="Aankomst" value=""/>
+        <input required id="departureTextFieldHome" type="text" placeholder="Vertrek" value=""/>
+        <input required class="availabilityTextField" id="peopleTextFieldHome" type="text" pattern="\d*" maxlength="2" placeholder="Personen"/>
+        <input class="button" id="checkAvailabilityButton" type="button" value="Check beschikbaarheid >">
+      </div>
+    </section>
+    <section id="IntroSection" class="section">
+      <div class="container">
+        <h1 class="undertitle">lang!Introductie</h1>
+        <h1 class="title">lang!WELKOM BIJ LA BASTIDE AU VENTOUX</h1>
+        <p class="paragraph">lang!--IntroParagraph</p>
+  <!--      <div class="grid3Columns">-->
+        <div class="row">
+          <div class="col-lg" style="background-image: url('images/slideshowKamers/ventoux kamer terras.jpg');">
+            <div class="introBackground"><a href="#KamersSection"></a>
+              <h2>lang!Kamers</h2>
+              <h1>lang!Lees meer</h1>
+            </div>
+          </div>
+          <div class="col-lg" style="background-image: url('images/slideshowTuin/in de zon zwembad.jpg');">
+            <div class="introBackground"><a href="#KamersSection"></a>
+              <h2>lang!Tuin</h2>
+              <h1>lang!Lees meer</h1>
+            </div>
+          </div>
+          <div class="col-lg" style="background-image: url('images/slideshowOmgeving/rode rotsen.jpg');">
+            <div class="introBackground"><a href="#OmgevingSection"></a>
+              <h2>lang!Omgeving</h2>
+              <h1>lang!Lees meer</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="KamersSection" class="section">
+      <div class="container">
+  <!--      <div class="grid2Columns">-->
+        <div class=".responsive-2-column-container">
+          <div class="responsive-2-column">
+            <div class="vertical-center">
+            <h1 class="undertitle">lang!Onze kamers</h1>
+            <h1 class="title">lang!VIER GASTENKAMERS</h1>
+            <p class="paragraph">lang!--KamersParagraph</p> 
+          </div>
+          </div>
+          <div class="responsive-2-column">
+            <div class="slideshowContainer">
+              <img id="kamersSlideshow" class="slideshow" src="" alt=""/>
+            </div>
+          </div>
+        </div>
+  <!--      <div class="grid2Columns">-->
+        <div class=".responsive-2-column-container">  
+          <div class="responsive-2-column">
+            <div class="slideshowContainer">
+              <img id="tuinSlideshow" class="slideshow" src="" alt=""/>
+            </div>
+          </div>        
+          <div class="responsive-2-column">
+            <div class="vertical-center">
+              <h1 class="undertitle">lang!Onze tuin</h1>
+              <h1 class="title">lang!ZWEMBAD MET POOLHOUSE</h1>
+              <p class="paragraph">lang!--TuinParagraph</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="OmgevingSection" class="section">
+      <div class="container">
+  <!--      <div class="grid2Columns">-->
+        <div>  
+          <div class="responsive-2-column">
+  <!--          <div class="vertical-center">-->
+              <h1 class="undertitle">lang!Omgeving</h1>
+              <h1 class="title">lang!GELEGEN IN HET HART VAN DE PROVENCE</h1>
+              <p class="paragraph">lang!--OmgevingParagraph</p> 
+  <!--            </div>-->
+            </div>
+          <div class="responsive-2-column">
+            <div class="slideshowContainer">
+              <img id="omgevingSlideshow" class="slideshow" src="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="PrijzenEnContactBackground">
+      <section id="PrijzenSection" class="section">
+  <!--      <div class="container">-->
+          <h1 class="undertitle">lang!Prijzen</h1>
+          <h1 class="title">lang!ONZE PRIJZEN</h1>
+          <h1 class="undertitle">lang!Korting vanaf 1 Augustus 2019!</h1>   
+          <div class="row">
+            <div class="col-sm" >
+              <h3>lang!Hoogseizoen</h3>
+              <h1 class="title">125 Euro</h1>
+            </div>
+            <div class="col-sm" >
+              <h3>lang!Laagseizoen</h3>
+              <h1 class="title">115 Euro</h1>
+            </div>
+          </div>
+          <h1 class="title">lang!ONZE VOORWAARDEN</h1>
+          <p class="paragraph">lang!--VoorwaardenParagraph</p>
+  <!--      </div>-->
+      </section>
+      <section id="ContactSection" class="section">
+  <!--      <div class="container">-->
+          <h1 class="undertitle">lang!Contact</h1>   
+          <h1 class="title">lang!Stuur ons een bericht</h1>  
+          <form id="contactForm">
+            <input required id="contactNameInput" type="text" placeholder="Naam" value=""/><br/>
+            <input required id="contactEmailInput" type="text" placeholder="Email" value=""/><br/>
+            <input required id="contactPhoneInput" type="text" placeholder="Telephoon nummer" value=""/><br/>
+            <textarea required id="contactMessageInput" type="text" placeholder="Bericht" value=""></textarea><br/>
+            <input required id="contactSubmitButton" class="button" type="button" value="Verstuur"/><br/>
+          </form>
+  <!--      </div>-->
+      </section>
+    </div>
+    <section id="BereikbaarheidSection" class="section">
+      <div class="container">
+        <h1 class="undertitle">lang!Bereikbaarheid</h1>
+        <h1 class="title">
+          564 Chemin des vergers aux Baux <br/>
+          84410 Bedoin France
+        </h1>
+        <div id="contactMap"></div>
+        <div class="row">
+          <div class="col-lg" style="background-image: url('../images/snelweg.jpg');">
+            <div>
+              <h1 class="undertitle">lang!Per auto</h1>
+              <p class="paragraph">lang!--AutoParagraph</p>
+            </div>
+          </div>
+          <div class="col-lg" style="background-image: url('../images/trein.jpg');">
+            <div>
+              <h1 class="undertitle">lang!Per trein</h1>
+              <p class="paragraph">lang!--TreinParagraph</p>
+            </div>
+          </div>
+          <div class="col-lg" style="background-image: url('../images/plane.jpg');">
+            <div>
+              <h1 class="undertitle">lang!Per vliegtuig</h1>
+              <p class="paragraph">lang!--VliegtuigParagraph</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="FooterSection" class="section">
+      <div>
+        <h2>lang!Wij hopen u spoedig te zien hier in de provence!</h2>
+        <h1>info@bastideventoux.com</h1>
+        <h1>+33-6 58 54 10 44</h1>
+        <h1>+33-6 72 46 59 49</h1>
+  <!--
+        <div class="container">
+          <div class="grid3Columns">
+
+          </div>
+        </div>
+  -->
+      </div>
+    </section>
+  </div> 
+
+    <script src="js/langLoader.js"></script>
+    <script src="js/langDisplayer.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js" integrity="sha256-vCJSGCdP2sT9Jc9MZTjK2oXAvE5bvDZ+hcFOqh0X/fc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>  
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="bookings/js/lightpick.js"></script>
+    <script src="bookings/js/main.js"></script>
+    <script src="bookings/js/inputErrors.js"></script>
+    <script src="js/index.js"></script>
+  <!--  <script src="webStats/newStat.js"></script>-->
+  </body>
+</html>

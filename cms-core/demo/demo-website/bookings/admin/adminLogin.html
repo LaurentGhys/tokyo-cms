@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/admin/adminLogin.css">
+    <link rel="stylesheet" href="../css/alertsTheme.css">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+  </head>
+  <body>
+    <div id="backgroundImage"></div>
+
+ 
+    <div id="loginContainer">
+      <div id="container">
+        <h1>Admin Login</h1>
+        <form id="dateForm">
+          <input required class="textField" id="emailTextField" type="email" placeholder="Email" value=""/><br/>
+          <input required class="textField" id="passwordTextField" type="password" placeholder="Password" value=""/><br/>
+          <p id="priceLabel"></p>
+          <p id="priceInfoLabel"></p>
+          <input class="button" id="loginButton" type="button" value="Login">
+        </form>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/admin/adminLogin.js"></script>
+
+  </body>
+</html>

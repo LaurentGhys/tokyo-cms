@@ -1,0 +1,79 @@
+.langDisplayer-background {
+  height: 100%;
+  height: 100vh;
+  width: 100%;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  position: fixed;
+  background-color: #006cff;
+  background: url('../images/mont%20ventouwx%20website.jpg');
+  background-size: cover;
+}
+  
+.langDisplayer-background.exitAnim {
+  animation: slide-out-top 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.25s both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flip-in-hor-bottom {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+
+.langDisplayer-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vh 5vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  animation: fade-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+.langDisplayer-flagContainer {
+  display: block;
+  margin: auto;
+}
+
+.langDisplayer-flag {
+  height: 100px;
+  padding: 10px;
+  transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+.langDisplayer-flag:hover {
+  transform: scale(1.1);
+  height: 120px;
+}
+

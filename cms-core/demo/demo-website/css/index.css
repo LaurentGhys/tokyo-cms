@@ -1,0 +1,729 @@
+* {
+  margin: 0px;
+  font-family: 'Oswald', sans-serif;
+  max-width: 100vw;
+}
+
+body {
+/*
+  font-family: 'Yellowtail', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+*/
+  --mainColor: #fc0;
+  --secondaryColor: #20272f;
+  --tertiaryColor: #898989;
+  --backgroundColor: #e8e8e8;
+  --transparent: rgba(0, 0, 0, 0);
+  --shadowColor: rgba(0, 0, 0, 0.75);
+  --success: #28a745;
+  --danger: #dc3545;
+  --secondary: #6c757d;
+  font-family: 'Oswald', sans-serif;
+}
+#content {
+  margin-top: 8vh;
+  max-width: 100vw;
+}
+
+/* NAVBAR STUFF */
+#navbar {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  height: 8vh;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  border-bottom: solid 3px var(--mainColor);
+}
+#navbar a {
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  line-height: 8vh;
+  padding: 0px 50px;
+  text-decoration: none;
+  color: var(--secondary);
+  font-family: 'Oswald', sans-serif;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+/*  transition: all 3s ease;*/
+}
+#navbar a:hover {
+/*  border-bottom: solid 3px var(--mainColor);*/
+  transform: scale(1.25);
+}
+#navbar .navbarIcon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  #navbar a:not(:first-child) {display: none;}
+  #navbar a.navbarIcon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  #navbar.responsive {
+	position: fixed; height: auto;
+}
+  #navbar.responsive a.navbarIcon {
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+  #navbar.responsive a {
+    z-index: 2000;
+    float: none;
+    display: block;
+    text-align: left;
+    text-align: center;
+    height: 100%;
+    line-height: 8vh;
+    padding: 0px 50px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: 'Oswald', sans-serif;
+    transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  }
+}
+
+/* CONTAINER STUFF */
+.section {
+  width: 100%;
+  position: relative;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.grid3Columns {
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30vh;
+  column-gap: 20px;
+}
+.grid2Columns {
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+/*
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: auto;
+*/
+  column-gap: 20px;
+}
+.responsive-2-column-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.responsive-2-column {
+  width: 49%;
+  height: auto;
+  display: inline-block;
+  position: relative;
+
+  margin: auto;
+/*  border: 2px #0066FF solid;*/
+} 
+.responsive-2-column .vertical-center {
+  padding: 0 20px;
+  position: relative;
+/*
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+*/
+}
+@media (max-width: 992px) {
+  .responsive-2-column {
+    width: 100%;
+    min-height: 10vh;
+  }
+/*
+  .responsive-2-column .vertical-center {
+    position: relative;
+    top: 0%;
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+*/
+}
+
+
+/* TEXT STUFF */
+.undertitle {
+  font-family: Yellowtail, sans-serif;
+  color: #fc0;
+  font-size: 30px;
+  text-align: center;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+  text-transform: capitalize;
+}
+.undertitle.black {
+  color: #20272f;
+}
+.undertitle:hover {
+  transform: scale(1.1);
+}
+.title {
+  font-family: Oswald, sans-serif;
+  color: #20272f;
+  font-size: 36px;
+  line-height: 35px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+  text-transform: uppercase;
+}
+.title:hover {
+  transform: scale(1.1);
+}
+.paragraph, .paragraph a {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: var(--tertiaryColor);
+  font-size: 14px;
+  text-align: center;
+  height: auto;
+}
+.paragraph a {
+  color: var(--mainColor);
+}
+
+/* SLIDESHOW STUFF */
+.slideshowContainer {
+  width: 100%;
+  height: 100%;
+  min-height: 30vh;
+}
+.slideshow {
+/*   opacity: 0;*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; 
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  position: absolute;
+}
+.slideshowContainer .slideshow-button {
+  position: absolute;
+  color: white !important;
+  font-size: 42px;
+  left: 10px;
+  bottom: 0px;
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
+}
+.slideshowContainer .slideshow-button.next {
+  right: 10px;
+  left: auto;
+}
+.slideshowContainer .slideshow-dot-container {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  bottom: 0;
+  text-align: center;
+}
+
+.slideshowContainer .slideshow-dot-container .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 16px;
+}
+.slideshowContainer .slideshow-dot-container .dot.active, .slideshowContainer .slideshow-dot-container .dot:hover {
+  background-color: #fc0;
+  opacity: 0.9;
+  /* border-radius: 25%; */
+}
+
+
+
+/* TEXT FIELDS STUFF */
+input {
+  margin: 10px 10px;
+  padding: 20px 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: var(--backgroundColor);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: var(--secondaryColor);
+  font-size: 14px;  
+  border-radius: 5px;
+  min-height: 30px;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+input:hover, input:focus-within {
+  transform: scale(1.1);
+}
+textarea {
+  margin: 10px 10px;
+  padding: 20px 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: var(--backgroundColor);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: var(--secondaryColor);
+  font-size: 14px;  
+  border-radius: 5px;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+textarea:hover, textarea:focus-within {
+  transform: scale(1.1);
+}
+.button {
+  margin: 10px 10px;
+  padding: 20px 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: 'OSwald', sans-serif;
+  font-size: 20px;  
+  border-radius: 15px;
+  min-height: 30px;
+  font-weight: bold;
+  background-color: var(--secondaryColor);
+  color: white;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* LOADER ICON STUFF */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* HOME SECTION STUFF */
+#HomeSection {
+  background-image: url('../images/mont ventouwx website.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-bottom: 5vh;
+  position: relative;
+  text-shadow: 3px 3px 3px var(--shadowColor);
+}
+#HomeSection .centerContainer {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  transform: translate(-5%, -30%);
+}
+#HomeSection h4 {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 64px;
+  text-align: left;
+  text-shadow: 3px 3px 3px var(--shadowColor);
+  margin-top: -20px;
+  width: 100%;
+}
+#HomeSection #availabilityContainer {
+  position: relative;
+  margin-top: 80vh;
+  background-color: var(--secondaryColor);
+/*  padding: 10px 30px;*/
+/*  border: solid 5px var(--mainColor);*/
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  max-width: 80%;
+  width: auto;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+#HomeSection #availabilityContainer:hover {
+}
+#HomeSection #availabilityContainer #checkAvailabilityButton {
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;  
+  min-height: 30px
+  color: white;
+  background-color: var(--mainColor);
+  font-weight: bold;
+}
+/* INTRO SECTION STUFF */
+#IntroSection {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+#IntroSection .row div {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vh;
+}
+#IntroSection .row div .introBackground {
+  background-color: var(--secondaryColor);
+  padding: 20px 23px 18px;
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  right: 0;
+  top: auto;
+  height: auto;
+}
+#IntroSection .row div .introBackground a {
+  text-decoration: none;
+  color: lightgray;
+  text-transform: capitalize;
+}
+#IntroSection .row div .introBackground h2 {
+  text-align: center;
+  color: var(--mainColor);
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+#IntroSection .row div .introBackground h1 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: lightgray;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+#IntroSection .row div .introBackground h2:hover {
+  transform: scale(1.1);
+}
+#IntroSection .row div .introBackground h1:hover {
+  transform: scale(1.1);
+}
+
+/* KAMERS SECTION STUFF */
+#KamersSection {
+  background-color: #f8f8f8;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+/* OMGEVING STUFF */
+#OmgevingSection {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+/* PRIJZEN EN CONTACT */
+#PrijzenEnContactBackground {
+  background-image: url('../images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  height: auto;
+/*  padding: 10vh;*/
+  position: relative;
+  background-attachment: fixed;
+  padding: 10vw;
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
+}
+
+/* PRIJZEN SECTION STUFF */
+#PrijzenSection {
+  height: auto;
+  background-color: white;
+  padding-top: 5vh;
+/*
+  border-radius: 5px 5px 0 0;
+  height: auto;
+  margin: auto;
+  padding: 100px;
+  position: relative;
+*/
+}
+#PrijzenSection h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secondaryColor);
+}
+#PrijzenSection h3 span {
+  font-weight: normal;
+  color: rgba(32, 39, 47, 0.7);;
+}
+#PrijzenSection .row {
+  width: 80%;
+  margin: auto;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+}
+#PrijzenSection .paragraph {
+  text-align: left;
+  font-size: 14px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 2vh;
+}
+
+/* CONTACT SECTION STUFF */
+#ContactSection {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: white;
+/*
+  border-radius: 5px 5px 0 0;
+  height: auto;
+  margin: auto;
+  padding: 0px 100px 100px 100px;
+  position: relative;
+*/
+}
+#ContactSection form {
+  margin-top: 5vh;
+}
+#ContactSection input {
+  width: 40%;
+}
+#ContactSection textarea {
+  max-width: 40%;
+  min-width: 40%;
+  max-height: 20vh;
+  min-height: 30px
+}
+#ContactSection .button {
+  width: 40%;
+}
+
+/* BEREIKBAARHEID SECTION STUFF */
+#BereikbaarheidSection {
+  background-color: white;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+#BereikbaarheidSection title {
+  font-size: 16px;
+}
+#BereikbaarheidSection #contactMap {
+  height: 35vh;
+  width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+#BereikbaarheidSection .row div {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 300px;
+}
+#BereikbaarheidSection .row div div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.7);
+}
+#BereikbaarheidSection .row div div .undertitle {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+#BereikbaarheidSection .row div div p {
+  opacity: 0.75;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
+/* FOOTER */
+#FooterSection {
+  background-image: url('../images/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  height: auto;
+  width: auto;
+  position: relative;
+  padding: 0px !important;
+}
+#FooterSection div { 
+  position: relative;
+  padding: 5vh;
+  height: 100%;
+  width: auto;
+  background-color: rgba(20, 20, 20, 0.75);
+}
+#FooterSection h1 {
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  opacity: 0.75;
+}
+#FooterSection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+}
+
+/* RESPONSIVE CHANGES */
+
+/*
+@media only screen and (max-width: 600px) {
+  .grid2Columns {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 20vh;
+  }
+  .grid3Columns {
+    
+    grid-template-rows: 15vh;
+  }
+  .container {
+    padding: 0px 1vw;
+  }
+  #PrijzenEnContactBackground {
+    padding: 5vw;
+  }
+  #ContactSection input {
+    width: 70%;
+  }
+  #ContactSection textarea {
+    width: 70%;
+  }
+  #BereikbaarheidSection .grid3Columns div div .undertitle {
+    font-size: 16px;
+    line-height: 12px;
+  }
+  #BereikbaarheidSection .grid3Columns div div p {
+    font-size: 14px;
+  }
+  #ContactSection .container {
+    padding: 20px;
+  }
+  #PrijzenSection .container {
+    padding: 20px;
+  }
+}
+*/
+@media screen and (max-width: 1000px) {
+  input {
+    padding: 15px 15px;
+  }
+  #PrijzenEnContactBackground {
+    padding: 5vw;
+  }
+  .section {
+    padding: 30px;
+  }
+  #PrijzenSection h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--secondaryColor);
+  }
+  .undertitle {
+    font-size: 26px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .grid3Columns {
+    grid-template-rows: 15vh;
+    column-gap: 3px;
+  }
+  .container { 
+    padding: 0px 5vw;
+  }
+  #navbar a {
+    padding: 0px 20px;
+  }
+  #BereikbaarheidSection .grid3Columns {
+
+  }
+  #ContactSection input {
+    width: 60%;
+  }
+  #ContactSection textarea {
+    max-width: 60%;
+    min-width: 60%;
+  }
+  #ContactSection .button {
+    width: 60%;
+  }
+  #HomeSection h4 {
+    font-size: 46px;
+  }
+  #HomeSection #availabilityContainer {
+    margin: auto;
+    margin-top: 50vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  #ContactSection input {
+    width: 90%;
+  }
+  #ContactSection textarea {
+    max-width: 90%;
+    min-width: 90%;
+  }
+  #ContactSection .button {
+    width: 90%;
+  }
+}
+

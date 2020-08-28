@@ -1,0 +1,7 @@
+.errorLabel {
+  position:  absolute;
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}

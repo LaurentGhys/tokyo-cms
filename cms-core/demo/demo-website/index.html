@@ -1,23 +1,323 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <script src="../tokyoCMSCore/tokyoCMSCore.js"></script>
+  <title>Bastide au Ventoux</title>
+  <meta content="width=device-width, initial-scale=1"
+        name="viewport">
+  <meta http-equiv="content-type"
+        content="text/html;charset=utf-8" />
+  <link href="css/lang.css"
+        rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+  <link href="css/index.css"
+        rel="stylesheet">
+  <link href="bookings/css/inputErrors.css"
+        rel="stylesheet">
+  <link href="bookings/css/alertsTheme.css"
+        rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|Yellowtail&display=swap&subset=latin-ext"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        type="text/css"
+        href="https://unpkg.com/lightpick@latest/css/lightpick.css">
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <h1 class="tCMS-label"
-        data-labelid="headertitle">Test website</h1>
+  <div id="content">
+    <div class="topnav"
+         id="navbar">
+      <a href="#HomeSection">lang!Home</a>
+      <a href="#KamersSection">lang!Kamers</a>
+      <a href="#OmgevingSection">lang!Omgeving</a>
+      <a href="#ContactSection">lang!Contact</a>
+      <a href="#BereikbaarheidSection">lang!Bereikbaarheid</a>
+      <a href="javascript:void(0);"
+         class="navbarIcon"
+         onclick="showMobileNavbar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
-    <h2 class="tCMS-label"
-        data-labelid="header1">Dymanic header</h2>
+    <section id="HomeSection"
+             class="section"
+             style="height: 80vh;">
+      <div class="centerContainer">
+        <!-- <h1 class="undertitle">lang!  Welkom</h1> -->
+        <h4>La Bastide</h4><br>
+        <h4>au Ventoux</h4>
+        <h5 class="undertitle"><a href="#IntroSection"
+             style="color: inherit;">lang!CoronaTitle</a></h5>
+      </div>
+      <div id="availabilityContainer"
+           style="display: none;">
+        <input required
+               id="arrivalTextFieldHome"
+               type="text"
+               placeholder="lang!Aankomst"
+               value="" />
+        <input required
+               id="departureTextFieldHome"
+               type="text"
+               placeholder="lang!Vertrek"
+               value="" />
+        <input required
+               class="availabilityTextField"
+               id="peopleTextFieldHome"
+               type="text"
+               pattern="\d*"
+               maxlength="2"
+               placeholder="lang!Personen" />
+        <input class="button"
+               id="checkAvailabilityButton"
+               type="button"
+               value="lang!Check beschikbaarheid">
+      </div>
+    </section>
+    <section id="IntroSection"
+             class="section">
+      <div class="container">
+        <!-- <h1 class="undertitle">lang!Introductie</h1> -->
+        <h1 class="title">lang!WELKOM BIJ LA BASTIDE AU VENTOUX</h1>
+        <h2 class="undertitle">lang!CoronaSubtitle</h2>
+        <p class="paragraph">lang!CoronaMaatregelen</p>
+        <!-- <p class="paragraph">lang!--IntroParagraph</p> -->
+        <!--      <div class="grid3Columns">-->
+        <div class="row">
+          <div class="col-lg"
+               style="background-image: url('images/slideshowKamers/ventoux kamer terras.jpg');">
+            <div class="introBackground">
+              <h2>lang!Kamers</h2>
+              <h1><a href="#KamersSection" />lang!Lees meer</h1>
+            </div>
+          </div>
+          <div class="col-lg"
+               style="background-image: url('images/slideshowTuin/in de zon zwembad.jpg');">
+            <div class="introBackground">
+              <h2>lang!Tuin</h2>
+              <h1><a href="#KamersSection">lang!Lees meer</a></h1>
+            </div>
+          </div>
+          <div class="col-lg"
+               style="background-image: url('images/slideshowOmgeving/rode rotsen.jpg');">
+            <div class="introBackground">
+              <h2>lang!Omgeving</h2>
+              <h1><a href="#OmgevingSection">lang!Lees meer</a></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="KamersSection"
+             class="section">
+      <div class="container">
+        <!--      <div class="grid2Columns">-->
+        <div class=".responsive-2-column-container">
+          <div class="responsive-2-column">
+            <div class="vertical-center">
+              <h1 class="undertitle">lang!Onze kamers</h1>
+              <h1 class="title">lang!VIER GASTENKAMERS</h1>
+              <p class="paragraph">lang!--KamersParagraph</p>
+            </div>
+          </div>
+          <!-- WOKRING HERE -->
+          <div class="responsive-2-column">
+            <div class="slideshowContainer">
+              <img id="kamersSlideshow"
+                   class="slideshow"
+                   alt="" />
+              <a class="slideshow-button previous"
+                 onclick="SlideshowSubstractIndex(kamersSlideshow)">
+              </a>
+              <a class="slideshow-button next"
+                 onclick="SlideshowAddIndex(kamersSlideshow)">></a>
+              <div class="slideshow-dot-container">
+                <!-- DOTS WILL BE GENERATED IN slideshow.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--      <div class="grid2Columns">-->
+        <div class=".responsive-2-column-container">
+          <div class="responsive-2-column">
+            <div class="slideshowContainer">
+              <img id="tuinSlideshow"
+                   class="slideshow"
+                   alt="" />
+              <a class="slideshow-button previous"
+                 onclick="SlideshowSubstractIndex(tuinSlideshow)">
+              </a>
+              <a class="slideshow-button next"
+                 onclick="SlideshowAddIndex(tuinSlideshow)">></a>
+              <div class="slideshow-dot-container">
+                <!-- DOTS WILL BE GENERATED IN slideshow.js -->
+              </div>
+            </div>
+          </div>
+          <div class="responsive-2-column">
+            <div class="vertical-center">
+              <h1 class="undertitle">lang!Onze tuin</h1>
+              <h1 class="title">lang!ZWEMBAD MET POOLHOUSE</h1>
+              <p class="paragraph">lang!--TuinParagraph</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="OmgevingSection"
+             class="section">
+      <div class="container">
+        <!--      <div class="grid2Columns">-->
+        <div>
+          <div class="responsive-2-column">
+            <!--          <div class="vertical-center">-->
+            <h1 class="undertitle">lang!Omgeving</h1>
+            <h1 class="title">lang!GELEGEN IN HET HART VAN DE PROVENCE</h1>
+            <p class="paragraph">lang!--OmgevingParagraph</p>
+            <!--            </div>-->
+          </div>
+          <div class="responsive-2-column">
+            <div class="slideshowContainer">
+              <img id="omgevingSlideshow"
+                   class="slideshow" />
+              <a class="slideshow-button previous"
+                 onclick="SlideshowSubstractIndex(omgevingSlideshow)">
+              </a>
+              <a class="slideshow-button next"
+                 onclick="SlideshowAddIndex(omgevingSlideshow)">></a>
+              <div class="slideshow-dot-container">
+                <!-- DOTS WILL BE GENERATED IN slideshow.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="PrijzenEnContactBackground">
+      <section id="PrijzenSection"
+               class="section">
+        <!--      <div class="container">-->
+        <!-- <h1 class="undertitle">lang!Prijzen</h1> -->
+        <h1 class="title">lang!ONZE PRIJZEN</h1>
+        <!-- <h1 class="undertitle">lang!Korting vanaf 1 Augustus 2019!</h1>    -->
+        <!-- <h1 class="undertitle">lang!Goedkoper dan andere sites!</h1> -->
+        <!-- <h1 class="undertitle black">lang!AprilKorting</h1> -->
+        <div class="row">
+          <div class="col-sm">
+            <h3>lang!Hoogseizoen</h3>
+            <h1 class="title">120 Euro</h1>
+          </div>
+          <div class="col-sm">
+            <h3>lang!Laagseizoen</h3>
+            <h1 class="title">120 Euro</h1>
+          </div>
+        </div>
+        <h1 class="title">lang!ONZE VOORWAARDEN</h1>
+        <p class="paragraph">lang!--VoorwaardenParagraph</p>
+        <!--      </div>-->
+      </section>
+      <section id="ContactSection"
+               class="section">
+        <!--      <div class="container">-->
+        <h1 class="undertitle">lang!Contact</h1>
+        <h1 class="title">lang!Stuur ons een bericht</h1>
+        <p class="paragraph">info@bastideventoux.com</p>
+        <form id="contactForm">
+          <input required
+                 id="contactNameInput"
+                 type="text"
+                 placeholder="lang!Naam"
+                 value="" /><br />
+          <input required
+                 id="contactEmailInput"
+                 type="text"
+                 placeholder="lang!Email"
+                 value="" /><br />
+          <input required
+                 id="contactPhoneInput"
+                 type="text"
+                 placeholder="lang!Telephoon nummer"
+                 value="" /><br />
+          <textarea required
+                    id="contactMessageInput"
+                    type="text"
+                    placeholder="lang!Bericht"
+                    value=""></textarea><br />
+          <input required
+                 id="contactSubmitButton"
+                 class="button"
+                 type="button"
+                 value="lang!Verstuur" /><br />
+        </form>
+        <!--      </div>-->
+      </section>
+    </div>
+    <section id="BereikbaarheidSection"
+             class="section">
+      <div class="container">
+        <h1 class="undertitle">lang!Bereikbaarheid</h1>
+        <h1 class="title">
+          564 Chemin des vergers aux Baux <br />
+          84410 Bedoin France
+        </h1>
+        <div id="contactMap"></div>
+        <div class="row">
+          <div class="col-lg"
+               style="background-image: url('../images/snelweg.jpg');">
+            <div>
+              <h1 class="undertitle">lang!Per auto</h1>
+              <p class="paragraph">lang!--AutoParagraph</p>
+            </div>
+          </div>
+          <div class="col-lg"
+               style="background-image: url('../images/trein.jpg');">
+            <div>
+              <h1 class="undertitle">lang!Per trein</h1>
+              <p class="paragraph">lang!--TreinParagraph</p>
+            </div>
+          </div>
+          <div class="col-lg"
+               style="background-image: url('../images/plane.jpg');">
+            <div>
+              <h1 class="undertitle">lang!Per vliegtuig</h1>
+              <p class="paragraph">lang!--VliegtuigParagraph</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="FooterSection"
+             class="section">
+      <div>
+        <h2>lang!Wij hopen u spoedig te zien hier in de provence!</h2>
+        <h1>info@bastideventoux.com</h1>
+        <h1>+33-6 58 54 10 44</h1>
+        <h1>+33-6 72 46 59 49</h1>
+        <!--
+<div class="container">
+<div class="grid3Columns">
 
-    <p class="tCMS-label"
-       data-labelid="paragraph">Dynamic paragraph</p>
-    <!-- <figure>
-        <img src=""
-             alt="">
-        <figcaption>Dynamic image</figcaption>
-    </figure> -->
+</div>
+</div>
+-->
+      </div>
+    </section>
+  </div>
+
+  <script src="js/index.js"></script>
+  <script src="js/slideshow.js"></script>
 </body>
 
 </html>

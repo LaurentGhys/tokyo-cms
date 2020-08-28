@@ -2,19 +2,46 @@ import React, { useEffect, useState } from 'react'
 import { Accordion, Badge, Button, Card, Col, Container, Form, Nav, Row, Tab } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { DatabaseGetApp } from '../../../global/abstraction/App.service'
+import { DatabaseGetLabels } from '../../../global/abstraction/Labels.service'
 import { Languages } from '../../../global/abstraction/Language.service'
 import { App } from '../../../global/models/App.model'
+import { LabelsToKeyedData } from '../../../global/models/KeyedData.model'
+import { Label } from '../../../global/models/Label.model'
+import { useTrackedState } from '../../../global/store/TrackedState'
 
 const AppEditorPage = () => {
 
 	const [changedLabels, setChangedLabels] = useState([])
 	const [app, setApp]: [App, any] = useState(null)
+	const [labels, setLabels]: [Label[], any] = useState([])
 	const { appId } = useParams()
+
+	const [testState, setTestState, testStateChanges, setOriginalTestState] = useTrackedState()
 
 	useEffect(() => {
 		DatabaseGetApp(appId)
-			.then(res => setApp(res.data))
+			.then(res => {
+				setApp(res.data)
+				DatabaseGetLabels(appId)
+					.then(labelsRes => {
+						const labels = labelsRes.data
+						setLabels(labels)
+
+						setOriginalTestState(LabelsToKeyedData(labels))
+					})
+			})
 	}, [])
+
+	useEffect(() => {
+		// console.log(testStateChanges())
+		console.log(testState)
+	}, [testState])
+
+	const getLabelValue = (labelId: string, langCode: string): string => (
+		changedLabels.includes(labelId) ?
+			changedLabels[labelId][langCode] :
+			labels.filter(label => label.id === labelId)[0]
+	)
 
 	const isLabelEmpty = (labelKey, lang = '') => {
 		// if (lang !== '') {
@@ -31,15 +58,17 @@ const AppEditorPage = () => {
 		// }
 		return false
 	}
-	const labelChangeHandler = (event, label, lang) => {
+
+	const labelChangeHandler = (event, labelId: string, langCode: string): void => {
 		// setChangedLabels({
 		// 	...changedLabels,
-		// 	[label.id]: {
-		// 		...changedLabels[label.id],
+		// 	[labelId]: {
+		// 		...changedLabels[labelId],
 		// 		[lang]: event.target.value
 		// 	}
 		// })
 	}
+
 	const applyLabelChanges = (labelKey, lang) => {
 		// setLabels({
 		// 	...labels,
@@ -116,10 +145,8 @@ const AppEditorPage = () => {
 																	<Tab.Pane key={langKey} eventKey={lang}>
 																		<Form.Control
 																			as='textarea' type="text" placeholder="..."
-																		// value={changedLabels.includes(labelId) ?
-																		// 	(changedLabels[label.id][lang]) :
-																		// 	(label[lang])}
-																		// onChange={(e) => labelChangeHandler(e, label, lang)}
+																			value={getLabelValue(labelId, lang)}
+																			onChange={(e) => labelChangeHandler(e, labelId, lang)}
 																		/>
 																		{changedLabels.includes(labelId) && (
 																			<div>
